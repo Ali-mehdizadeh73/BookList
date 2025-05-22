@@ -1,26 +1,26 @@
+@import "./../../components/styles/palette.css";
+
 /* AddForm.css */
 h1 {
     display: flex;
     text-align: center;
     align-items: center;
     justify-content: center;
+}
 
-;
-}
-span {
-    color: #007bff;
-}
+span,
 .icon {
-    color:#007bff;
+    color: var(--color-primary);
 }
+
 form {
     max-width: 600px;
     margin: 0 auto;
     padding: 20px;
-    background: #f5f5f5;
-    border: 1px solid #ccc;
+    background: var(--color-background);
+    border: 1px solid var(--color-muted);
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
 }
 
 form div {
@@ -31,52 +31,61 @@ form label {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
+    color: var(--color-primary);
 }
 
-form input[type='text'], form input[type='submit'] {
+form input[type='text'],
+form input[type='submit'] {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--color-muted);
     border-radius: 5px;
     box-sizing: border-box;
 }
 
+form input[type='text'] {
+    background: var(--color-surface);
+    color: var(--color-text);
+}
+
 form input[type='submit'] {
-    background: #007bff;
-    color: white;
+    background: var(--color-primary);
+    color: #fff;
     cursor: pointer;
+    font-weight: bold;
+    transition: background 0.2s;
 }
 
 form input[type='submit']:hover {
-    background: #0056b3;
+    background: var(--color-accent);
 }
 
 table {
     width: 100%;
     margin-top: 20px;
     border-collapse: collapse;
+    background: var(--color-surface);
 }
 
 table, th, td {
-    border: 1px solid #ccc;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--color-muted);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
 }
 
 th, td {
     padding: 10px;
     text-align: left;
+    color: var(--color-text);
 }
-#book-list{
-    background: #3a8ce4;
-    color: black;
+
+#book-list {
+    background: var(--color-secondary);
+    color: var(--color-text);
 }
+
+/* اگر خواستی ردیف‌های زوج جدول رنگ متفاوت داشته باشند این بخش را فعال کن */
 /*
-th{
-    background-color: #fff;
-    color: darkgray;
-} */
-
-
-/* tbody tr:nth-child(even) {
+tbody tr:nth-child(even) {
     background: #f2f2f2;
-} */
+}
+*/
